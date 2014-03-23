@@ -1,0 +1,20 @@
+public class TestBinarySearch {
+
+	public static void main(String[] args) {
+
+		int[] daArray = {1,3,5,6,7};
+		System.out.println("New array of size " + daArray.length + " containing the values 1,3,5,6 and 7" );
+
+		BinarySearch searchAndRescue = new BinarySearch(daArray);
+		
+		System.out.println("Searching for 1: " + searchAndRescue.search(1));
+		System.out.println("Searching for 2: " + searchAndRescue.search(2));
+		System.out.println("Searching for 3: " + searchAndRescue.search(3));
+		System.out.println("Searching for 6: " + searchAndRescue.search(6));
+		System.out.println("Searching for 7: " + searchAndRescue.search(7));
+		System.out.println("Searching for 9: " + searchAndRescue.search(9));
+		
+
+	}
+
+}
