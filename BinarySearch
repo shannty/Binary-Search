@@ -1,0 +1,35 @@
+import java.util.Arrays;
+public class BinarySearch {
+
+	
+	private int[] temp, original;
+	
+	public BinarySearch(int[] anArray) {
+		temp = anArray;
+		original = anArray;
+		Arrays.sort(temp);
+		Arrays.sort(original);	
+	}
+	
+	public boolean search(int target) {
+		int min = 0;
+		int max = original.length - 1;
+		int mid = (max + min) / 2;
+		
+		while (min <= max) {
+			if (original[mid] == target) {
+				return true;
+			}
+			else {
+				if (original[mid] < target) {
+					min = mid + 1;
+				}
+				else {
+					max = mid -1;
+				}
+				mid = (max + min) / 2;
+			}
+		}
+		return false;
+	}
+}
